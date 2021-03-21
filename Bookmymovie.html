@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BookMyMovie</title>
+	<style type="text/css">
+		.navbar2{
+			background-color:#e1c061;
+			border-radius: 30px;
+			padding: 13px;
+		}
+		.navbar2 span a{
+			position: sticky;
+			top: 3px;
+			text-decoration: none;
+			font-family: cursive;
+			padding: 20px;
+		}
+		.navbar1{
+			padding-top: 15px;
+		}
+		#location{
+			float: left;
+			font-size: 14px;
+			margin-top: 26px;
+			margin-left: 34px;
+			padding: 10px 0px 10px 0px;
+			border-radius:26px;
+			background-color:#00b8a9; 
+			border-style: none;
+			font-family: cursive;
+		}
+		.navbar2 a:hover{
+			color: red;
+		}
+		#sitename{
+			/*margin: auto;
+			display: block;width: 15%;*/
+			color: #f6416c;
+			padding-left: 30px;
+			font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black";
+			margin-left: 40%;
+		}
+		#search{
+			float:right;
+			padding: 5px;
+			margin: -48px;
+			margin-right: 5px;
+			border: 2px solid black;
+			border-radius: 26px;
+		}
+		header{
+			border-radius: 26px;
+			background-color: #00b8a9;
+		}
+		#image1{
+			height: 20px;
+			width: 20px;
+			border-radius: 10px;
+			float: right;
+			margin-top: -85px;
+			margin-right: 24px;
+		}
+		#moreop{
+			font-size: 18px;
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="navbar1">
+			<span>
+				<select id="location">
+					<optgroup>
+						<option id="mum">Mumbai</option>
+						<option id="pan">Panjim</option>
+						<option id="del">Delhi</option>
+						<option id="ban">Banglore</option>
+						<option id="pun">Pune</option>
+					</optgroup>
+				</select>
+			</span>
+			<h1 id="sitename">BookMyMovie</h1>
+				<span>
+					<div>
+						<input type="text" name="search" id="search" placeholder="&#128270; Search Movies,Th,etc;">
+		    		</div>
+		    	</span>
+		    	<span>
+		    		<img id="image1" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" >
+		    	</span>
+		</div>
+		<div>
+			<nav class="navbar2" >
+				<span><a href="">Home</a></span>
+				<span><a href="#">Now Showing</a></span>
+				<span><a href="#">Coming Soon</a></span>
+				<span><a href="#">Offers</a></span>
+				<span id="moreop"><a href="#">&#9776;</a></span>
+			</nav>	
+		</div>	
+	</header>
+</body>
+</html>
