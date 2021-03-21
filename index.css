@@ -1,0 +1,61 @@
+.navbar2{
+    background-color:#e1c061;
+    border-radius: 30px;
+    padding: 13px;
+}
+.navbar2 span a{
+    position: sticky;
+    top: 3px;
+    text-decoration: none;
+    font-family: cursive;
+    padding: 20px;
+}
+.navbar1{
+    padding-top: 15px;
+}
+#location{
+    float: left;
+    font-size: 14px;
+    margin-top: 26px;
+    margin-left: 34px;
+    padding: 10px 0px 10px 0px;
+    border-radius:26px;
+    background-color:#00b8a9; 
+    border-style: none;
+    font-family: cursive;
+}
+.navbar2 a:hover{
+    color: red;
+}
+#sitename{
+    /*margin: auto;
+    display: block;width: 15%;*/
+    color: #f6416c;
+    padding-left: 30px;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black";
+    margin-left: 40%;
+}
+#search{
+    float:right;
+    padding: 5px;
+    margin: -48px;
+    margin-right: 5px;
+    border: 2px solid black;
+    border-radius: 26px;
+}
+header{
+    border-radius: 26px;
+    background-color: #00b8a9;
+}
+#image1{
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    float: right;
+    margin-top: -85px;
+    margin-right: 24px;
+}
+#moreop{
+    font-size: 18px;
+    float: right;
+}
