@@ -59,3 +59,41 @@ header{
     font-size: 18px;
     float: right;
 }
+.posters{
+    padding: 20px 2px;
+    position: relative;
+}
+.posters img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    border-radius: 20px;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 20px;
+  margin-top: -50px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 5px 5px 5px 5px;
+}
+.prev{
+    left: 1em;
+}
+.next {
+    right: 1em;
+    /* border-radius: 3px 0 0 3px; */
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
