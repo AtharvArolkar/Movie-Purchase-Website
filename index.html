@@ -1,97 +1,92 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>BookMyMovie</title>
-    <link rel="stylesheet" href="index.css" />
-  </head>
-  <body>
-    <header>
-      <div class="navbar1">
-        <span>
-          <select id="location">
-            <optgroup>
-              <option id="mum">Mumbai</option>
-              <option id="pan">Panjim</option>
-              <option id="del">Delhi</option>
-              <option id="ban">Banglore</option>
-              <option id="pun">Pune</option>
-            </optgroup>
-          </select>
-        </span>
-        <h1 id="sitename">BookMyMovie</h1>
-        <span>
-          <div>
-            <input
-              type="text"
-              name="search"
-              id="search"
-              placeholder="&#128270; Search Movies, Theatres ..."
-            />
-          </div>
-        </span>
-      </div>
-      <div>
-        <nav class="navbar2">
-          <span><a href="">Home</a></span>
-          <span><a href="#">Now Showing</a></span>
-          <span><a href="#">Coming Soon</a></span>
-          <span><a href="#">Offers</a></span>
-          <span>
-            <img
-              id="image1"
-              src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
-            />
-          </span>
-        </nav>
-      </div>
-    </header>
-    <content>
-      <div class="posters">
-        <img src="images/poster1.jpg" />
-        <!-- <img src="images/poster2.jpg"> -->
-        <!-- <img src="images/poster3.jpg"> -->
-        <a class="prev" onclick="">&#10094;</a>
-        <a class="next" onclick="">&#10095;</a>
-      </div>
-      <div class="genres-container">
-        <div class="genres-title">Genres</div>
 
-        <div class="genre-gallery">
-          <a target="_blank" href="images/genre1.jpg">
-            <img src="images/genre1.jpg" alt="Fantasy" width="600" height="400"/>
-          </a>
+<head>
+  <title>BookMyMovie</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body class="body1">
+  <header>
+    <div class="navbar1">
+      <span>
+        <select id="location">
+          <optgroup>
+            <option id="mum">Mumbai</option>
+            <option id="pan">Panjim</option>
+            <option id="del">Delhi</option>
+            <option id="ban">Banglore</option>
+            <option id="pun">Pune</option>
+          </optgroup>
+        </select>
+      </span>
+      <h1 id="sitename">BookMyMovie</h1>
+      <span>
+        <div>
+          <input type="text" name="search" id="search" placeholder="&#128270; Search Movies, Theatres ..." />
         </div>
+      </span>
+    </div>
+    <div>
+      <nav class="navbar2">
+        <span><a href="index.html">Home</a></span>
+        <span><a href="TopHits.html">Top Hits</a></span>
+        <span><a href="ComingSoon.html">Coming Soon</a></span>
+        <span><a href="Offers.html">Offers</a></span>
+        <span>
+          <img id="image1" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" />
+        </span>
+      </nav>
+    </div>
+  </header>
+  <content>
+    <div class="posters">
+      <img src="images/poster1.jpg" />
+      <!-- <img src="images/poster2.jpg"> -->
+      <!-- <img src="images/poster3.jpg"> -->
+      <a class="prev" onclick="">&#10094;</a>
+      <a class="next" onclick="">&#10095;</a>
+    </div>
+    <div class="genres-container">
+      <div class="genres-title">Genres</div>
 
-        <div class="genre-gallery">
-          <a target="_blank" href="images/genre2.jpg">
-            <img src="images/genre2.jpg" alt="Superhero" width="600" height="400" />
-          </a>
-        </div>
-
-		<div class="genre-gallery">
-			<a target="_blank" href="images/genre3.jpg">
-			  <img src="images/genre3.jpg" alt="Action" width="600" height="400" />
-			</a>
-		</div>
-
-		<div class="genre-gallery">
-			<a target="_blank" href="images/genre4.jpg">
-			  <img src="images/genre4.jpg" alt="Drama" width="600" height="400" />
-			</a>
-		</div>
-
-		<div class="genre-gallery">
-			<a target="_blank" href="images/genre5.jpg">
-			  <img src="images/genre5.jpg" alt="Mystery" width="600" height="400" />
-			</a>
-		</div>
-		<div class="genre-gallery">
-			<a target="_blank" href="images/genre6.jpg">
-			  <img src="images/genre6.jpg" alt="Comedy" width="600" height="400" />
-			</a>
-		</div>
+      <div class="genre-gallery">
+        <a target="_blank" href="images/genre1.jpg">
+          <img src="images/genre1.jpg" alt="Fantasy" width="600" height="400" />
+        </a>
       </div>
-    </content>
-    <footer></footer>
-  </body>
+
+      <div class="genre-gallery">
+        <a target="_blank" href="images/genre2.jpg">
+          <img src="images/genre2.jpg" alt="Superhero" width="600" height="400" />
+        </a>
+      </div>
+
+      <div class="genre-gallery">
+        <a target="_blank" href="images/genre3.jpg">
+          <img src="images/genre3.jpg" alt="Action" width="600" height="400" />
+        </a>
+      </div>
+
+      <div class="genre-gallery">
+        <a target="_blank" href="images/genre4.jpg">
+          <img src="images/genre4.jpg" alt="Drama" width="600" height="400" />
+        </a>
+      </div>
+
+      <div class="genre-gallery">
+        <a target="_blank" href="images/genre5.jpg">
+          <img src="images/genre5.jpg" alt="Mystery" width="600" height="400" />
+        </a>
+      </div>
+      <div class="genre-gallery">
+        <a target="_blank" href="images/genre6.jpg">
+          <img src="images/genre6.jpg" alt="Comedy" width="600" height="400" />
+        </a>
+      </div>
+    </div>
+  </content>
+  <footer></footer>
+</body>
+
 </html>
