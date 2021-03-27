@@ -56,6 +56,21 @@ header{
     margin-top: 0px;
     margin-right: 9px;
 }
+#threelines{
+    font-size: 32px;
+    border-radius: 14px;
+    float: right;
+    margin-top: -5px;
+    margin-right: 13px;
+    color: grey;
+}
+/* #check:not(:checked){
+
+} */
+#check{
+    display: none;
+
+}
 .posters{
     padding: 10px 0px;
     position: relative;
@@ -183,4 +198,60 @@ footer{
 .footer-column a{
     text-decoration: none;
 }
-
+#profilediv{
+    background-color: #00b8a9;
+    border-radius: 30px 30px 0 0;
+}
+#profilepic{
+    
+    width: 130px;
+    height: 130px;
+    border-radius: 130px;
+    align-content: center;
+    padding: 25px;
+    
+}
+.sidenavbar{
+    display: inline-block;
+    position: absolute;
+    margin-right: 20px;
+    z-index: 100;
+    /* float: right; */
+    width: 250px;
+    height: 330px;
+    border-radius: 30px;
+    right: 0;
+    background-color: #ffde7d;
+    align-items: center;
+    /* border: 3px solid black; */
+    transition: 0.5s;
+    transition-property: width;
+}
+.sidenavbar a{
+    color: purple;
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+    font-family: cursive;
+}
+.sidenavbar a:hover {
+    border-radius: 20px;
+    background: #ecd89a;
+}
+#check:checked ~ .sidenavbar div {
+    display: none;
+}
+#check:checked ~ .sidenavbar a{
+    display: none;
+}
+#check:checked ~ .sidenavbar{
+    /* display: none; */
+    width:0%;
+    /* z-index: -10; */
+}
+content{
+    background-color: white;
+    /* z-index: -1; */
+    display: block;
+    /* display: none; */
+}

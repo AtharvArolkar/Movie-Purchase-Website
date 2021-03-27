@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>BookMyMovie-Top Hits</title>
 </head>
 
@@ -34,16 +36,24 @@
       <nav class="navbar2">
         <span><a href="index.html">Home</a></span>
         <span><a href="TopHits.html">Top Hits</a></span>
-        <span><a href="ComingSoon.html">Coming Soon</a></span>
-        <span><a href="Offers.html">Offers</a></span>
         <span>
-          <img id="image1" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" />
+          <label for="check" id="threelines"><i class="fa fa-user-circle"></i></label>
         </span>
       </nav>
     </div>
   </header>
   <content>
-
+    <input type="checkbox" id="check" checked>
+    <div class="sidenavbar">
+      <div id="profilediv">
+        <center><img id="profilepic" src="/images/profile pic.jpg"></center>
+      </div>
+      <center><a href="reglog.html">Login/Register</a>
+        <a href="#">Payment History</a>
+        <!-- <a href="#">Search History</a>
+            <a href="#">About Us</a> -->
+        <center>
+    </div>
     <div class="hits">
       <div id="hittitle">Weekly Hits</div>
       <div class="posterNname">
@@ -141,7 +151,9 @@
         </div>
       </div>
     </div>
+
   </content>
+
   <footer>
     <div class="footer-container">
       <div class="footer-column">
