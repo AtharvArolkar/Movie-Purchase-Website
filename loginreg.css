@@ -95,11 +95,3 @@ body{
     font-family: cursive;
     background-color: #01ff1536;
 }
-#homelink{
-    /* display: inline-block; */
-    position:absolute;
-    left: 50%;
-    top: 10px;
-    font-size: 12px;
-    transform: translate(-50%,-50%);
-}
