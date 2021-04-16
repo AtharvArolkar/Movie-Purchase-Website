@@ -1,0 +1,46 @@
+.hits{
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: white;
+    display: block;
+}
+.posterNname{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.hitgallery{
+    display: inline;
+}
+#hittitle{
+    color: #f6416c;
+    font-family: cursive;
+    font-weight: bold;
+    padding: 8px;
+    font-size: 22px;
+}
+.weeklyhits{
+    display: block;
+}
+#hitname{
+    text-align: center;
+    font-family: cursive;
+    display: inline-block;
+    width: 247px;
+    text-decoration: none;
+}
+.hitgallery img{
+    display: inline-block;
+    width: 217px;
+    height: 385px;
+    border-radius: 30px;
+    padding: 15px;
+}
+.movienames span a:hover{
+    color: red;
+}
+.hitgallery img:hover{
+    opacity: 0.5;
+}

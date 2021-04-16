@@ -1,0 +1,130 @@
+.navbar2{
+    background-color:#ffde7d;
+    border-radius: 30px;
+    padding: 13px;
+}
+
+.navbar2 span a{
+    position: sticky;
+    top: 3px;
+    text-decoration: none;
+    font-family: cursive;
+    padding: 20px;
+}
+.navbar1{
+    padding-top: 15px;
+}
+#location{
+    float: left;
+    font-size: 14px;
+    margin-top: 26px;
+    margin-left: 34px;
+    padding: 10px 0px 10px 0px;
+    border-radius:26px;
+    background-color:#00b8a9; 
+    border-style: none;
+    font-family: cursive;
+}
+.navbar2 a:hover{
+    color: red;
+}
+#sitename{
+    /*margin: auto;
+    display: block;width: 15%;*/
+    color: #f6416c;
+    padding-left: 30px;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black";
+    margin-left: 40%;
+}
+#search{
+    float:right;
+    padding: 5px;
+    margin: -48px;
+    margin-right: 5px;
+    border: 2px solid black;
+    border-radius: 26px;
+}
+header{
+    border-radius: 26px;
+    background-color: #00b8a9;
+}
+#image1{
+    height: 25px;
+    width: 25px;
+    border-radius: 14px;
+    float: right;
+    margin-top: 0px;
+    margin-right: 9px;
+}
+#threelines{
+    font-size: 32px;
+    border-radius: 14px;
+    float: right;
+    margin-top: -5px;
+    margin-right: 13px;
+    color: grey;
+}
+/* #check:not(:checked){
+
+} */
+#check{
+    display: none;
+
+}
+#profilediv{
+    background-color: #00b8a9;
+    border-radius: 30px 30px 0 0;
+}
+#profilepic{
+    
+    width: 130px;
+    height: 130px;
+    border-radius: 130px;
+    align-content: center;
+    padding: 25px;
+    
+}
+.sidenavbar{
+    display: inline-block;
+    position: absolute;
+    margin-right: 20px;
+    z-index: 100;
+    /* float: right; */
+    width: 250px;
+    height: 330px;
+    border-radius: 30px;
+    right: 0;
+    background-color: #ffde7d;
+    align-items: center;
+    /* border: 3px solid black; */
+    transition: 0.5s;
+    transition-property: width;
+}
+.sidenavbar a{
+    color: purple;
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+    font-family: cursive;
+}
+.sidenavbar a:hover {
+    border-radius: 20px;
+    background: #ecd89a;
+}
+#check:checked ~ .sidenavbar div {
+    display: none;
+}
+#check:checked ~ .sidenavbar a{
+    display: none;
+}
+#check:checked ~ .sidenavbar{
+    /* display: none; */
+    width:0%;
+    /* z-index: -10; */
+}
+content{
+    background-color: white;
+    /* z-index: -1; */
+    display: block;
+    /* display: none; */
+}

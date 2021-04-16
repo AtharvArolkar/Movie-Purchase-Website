@@ -1,0 +1,23 @@
+footer{
+    border-radius: 26px;
+    background-color: #ffde7d;
+    margin-top: 10px;
+    padding: 10px;
+    padding-left: 40px;
+   
+}
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+.footer-column{
+    padding-right: 40px;
+}
+.footer-column ul{
+    list-style: none;
+    padding-left: 0;
+}
+.footer-column a{
+    text-decoration: none;
+}
