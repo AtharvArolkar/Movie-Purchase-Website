@@ -6,10 +6,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="loginreg.css" />
+    <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Log In</title>
 </head>
 
 <body>
+    <header>
+        <div class="navbar1">
+            <span>
+            <select id="location">
+                <optgroup>
+                <option id="mum">Mumbai</option>
+                <option id="pan">Panjim</option>
+                <option id="del">Delhi</option>
+                <option id="ban">Banglore</option>
+                <option id="pun">Pune</option>
+                </optgroup>
+            </select>
+            </span>
+            <h1 id="sitename">BookMyMovie</h1>
+            <span>
+            <div>
+                <input type="text" name="search" id="search" placeholder="&#128270; Search Movies, Theatres ..." />
+            </div>
+            </span>
+        </div>
+        <div>
+            <nav class="navbar2">
+            <span><a href="index.html">Home</a></span>
+            <span><a href="TopHits.html">Top Hits</a></span>
+            <span>
+                <label for="check" id="threelines"><i class="fa fa-user-circle"></i></label>
+            </span>
+            </nav>
+        </div>
+        <input type="checkbox" id="check" checked>
+        <div class="sidenavbar">
+        <div id="profilediv">
+            <center><img id="profilepic" src="/images/profile pic.jpg"></center>
+        </div>
+            <center>
+                <a href="reglog.html">Login/Register</a>
+                <a href="#">Payment History</a>
+            <center>
+        </div>
+    </header>
     <content>
         <div id="loginbkgrd">
             <div id="login">
@@ -25,6 +68,46 @@
             </div>
         </div>
     </content>
+    <footer>
+        <div class="footer-container">
+          <div class="footer-column">
+            <h4 class="footer-list-header">About Pavilion</h4>
+            <ul class="footer-list-top">
+              <li><a href="#">GET TO KNOW US</a></li>
+              <li><a href="#">PROMOS</a></li>
+              <li><a href="#">EVENTS</a></li>
+              <li><a href="#">privacy</a></li>
+            </ul>
+          </div>
+          <div class="vl"></div>
+          <div class="footer-column">
+            <h4 class="footer-list-header">Help Me!</h4>
+            <ul class="footer-list-top">
+              <li>+919254336743 <i class="fa fa-phone"></i></li>
+              <li>
+                <a href="#">bookmymovie@gmail.com <i class="fa fa-envelope"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="vl"></div>
+          <div class="footer-column">
+            <h4 class="footer-list-header">Connect with us</h4>
+            <a href="facebook.com"><i class="fa fa-facebook"></i></a>
+            <a href="twitter.com"><i class="fa fa-twitter"></i></a>
+            <a href="instagram.com"><i class="fa fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <center><h4>OUR VISION</h4></center>
+          <center>
+            <p>
+              offering a wide range of theater and movie selection in various regions
+              in India at one click!!
+            </p>
+          </center>
+        </div>
+      </footer>
+      
 </body>
 
 </html>
