@@ -56,10 +56,10 @@
         <div id="loginbkgrd1">
             <div id="register">
                 <div><h2 id="loginheader">REGISTER</h2></div>
-                <form onsubmit="return validateReg()" action='' method=post>
-                <div><input type="text" name="fullname" id="fullname" class="essentials1" placeholder="Full Name" required></div>
-                <div><input type="email" name="email" id="email" class="essentials1" placeholder="Email" required></div>
-                <div><input type="text" name="number" id="number" class="essentials1" placeholder="Phone No." required></div>
+                <form action='' method=post>
+                <div><input type="text" name="Name" id="fullname" class="essentials1" oninput="validateInput(this)" pattern="^[a-z -]+$" placeholder="Full Name" required></div>
+                <div><input type="email" name="Email" id="email" class="essentials1" oninput="validateInput(this)" pattern='[\w._]+@[\w_.]+(\.{1}[a-zA-Z]+){1}' placeholder="Email" required></div>
+                <div><input type="text" name="Ph.Number" id="number" class="essentials1" oninput="validateInput(this)" pattern='^(\+91|0)?\d{10}$' placeholder="Phone No." required></div>
                 <div class="essentials1">
                     <div class="legend1">Gender</div>
                     <label for="male">male</label>
@@ -69,9 +69,9 @@
                         <label for="other">other</label>
                         <input type="radio" name="gender" id="other" value="other">
                 </div>
-                <div><input type="date" name="dob" class="essentials1" required></div>
-                <div><input type="text" name="username" id="username" class="essentials1" placeholder="Username" required></div>
-                <div><input type="password" name="password" id="password" class="essentials1" placeholder="Password" required></div>
+                <div><input type="date" name="dob" class="essentials1" onInput="validateAge(this)" required></div>
+                <div><input type="text" name="username" id="username" class="essentials1" oninput="validateInput(this)" pattern="^[a-z][\w.]+$" placeholder="Username" required></div>
+                <div><input type="password" name="password" minlength="6" id="password" class="essentials1" placeholder="Password" required></div>
                 <div><button type="submit" id="loginbutton" class="button1"> SignUp</button></div>
                 </form>
         </div>

@@ -61,8 +61,8 @@
                     <h2 id="loginheader">LOGIN</h2>
                 </div>
                 <form onsubmit="return validateLog()" action='' method=post>
-                <div><input type="text" name="username" id="username" class="essentials" placeholder="Username"></div>
-                <div><input type="password" name="password" id="password" class="essentials" placeholder="Password">
+                <div><input type="text" name="username" id="username" class="essentials" oninput="validateInput(this)" pattern="^[a-z][\w.]+$" placeholder="Username"></div>
+                <div><input type="password" name="password" id="password" class="essentials" minlength="6" placeholder="Password">
                 </div>
                 <div><button id="loginbutton" type="submit" class="button1"> LogIn</button></div>
                 </form>
