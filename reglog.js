@@ -3,6 +3,7 @@ function validateInput(input){
     if(input.validity.patternMismatch){
         var valMessage='Enter valid '+input.name;
         input.setCustomValidity(valMessage);
+        input.reportValidity();
     }else{
         input.setCustomValidity('');
     }
