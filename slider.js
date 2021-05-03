@@ -1,11 +1,19 @@
 var counter = 1;
+var counter_auto=1;
+
     setInterval(function () {
-        counter++;
-        if (counter > 4) {
+        if(counter_auto==counter){
+          counter++;
+          counter_auto++;
+        }else{
+          counter_auto=counter;
+        }
+        if (counter_auto > 4) {
             counter = 1;
+            counter_auto=1;
         }
         document.getElementById('radio' + counter).checked = true;
-        
+
     }, 5000);
 
     function prev(){
@@ -13,7 +21,6 @@ var counter = 1;
         if (counter == 0) {
             counter = 4;
         }
-        console.log(+counter)
         document.getElementById('radio' + counter).checked = true;
     }
     function next(){
@@ -21,6 +28,5 @@ var counter = 1;
         if (counter == 5) {
             counter = 1;
         }
-        console.log(+counter)
         document.getElementById('radio' + counter).checked = true;
     }
