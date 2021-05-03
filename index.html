@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>BookMyMovie</title>
   <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="slider.css" />
   <link rel="stylesheet" href="header.css" />
   <link rel="stylesheet" href="footer.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+  <script src="slider.js"></script>
 </head>
-
 <body class="body1">
   <header>
     <div class="navbar1">
@@ -36,28 +37,67 @@
         <span><a href="TopHits.html">Top Hits</a></span>
         <span>
           <label for="check" id="threelines"><i class="fa fa-user-circle"></i></label>
-      </span>
+        </span>
       </nav>
     </div>
     <input type="checkbox" id="check" checked>
     <div class="sidenavbar">
-        <div id="profilediv">
-            <center><img id="profilepic" src="/images/profile pic.jpg"></center>
-        </div>
-        <center><a href="reglog.html">Login/Register</a>
-            <a href="#">Payment History</a>
-            <!-- <a href="#">Search History</a>
+      <div id="profilediv">
+        <center><img id="profilepic" src="/images/profile pic.jpg"></center>
+      </div>
+      <center><a href="reglog.html">Login/Register</a>
+        <a href="#">Payment History</a>
+        <!-- <a href="#">Search History</a>
             <a href="#">About Us</a> -->
-            <center>
+        <center>
     </div>
   </header>
   <content>
-    <div class="posters">
-      <img src="images/poster1.jpg" />
-      <!-- <img src="images/poster2.jpg"> -->
-      <!-- <img src="images/poster3.jpg"> -->
-      <a class="prev" onclick="">&#10094;</a>
-      <a class="next" onclick="">&#10095;</a>
+    <div class="slider">
+      <div class="slides">
+        <!--radio buttons start-->
+        <input type="radio" name="radio-btn" id="radio1" checked>
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+        <!--radio buttons end-->
+        <!--slide images start-->
+        <div class="slide first">
+          <img src="images/poster1.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="images/poster2.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="images/poster3.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="images/poster4.jpg" alt="">
+        </div>
+        <!--slide images end-->
+        <!--automatic navigation start-->
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
+        <!--automatic navigation end-->
+        <div class="arrow">
+          <a class="prev" onclick="prev()">&#10094;</a>
+          <a class="next" onclick="next()">&#10095;</a>
+        </div>
+      </div>
+
+      <!--manual navigation start-->
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+      </div>
+      <!--manual navigation end-->
+
     </div>
     <div class="genres-container">
       <div class="genres-title">Genres</div>
@@ -100,35 +140,39 @@
   </content>
   <footer>
     <div class="footer-container">
-    <div class="footer-column">
-    <h4 class="footer-list-header">About Pavilion</h4>
-    <ul class="footer-list-top">
-      <li><a href="#">GET TO KNOW US</a></li>
-      <li><a href="#">PROMOS</a></li>
-      <li><a href="#">EVENTS</a></li>
-      <li><a href="#">privacy</a></li>
-    </ul>
-  </div>
-  <div class="vl"></div>
-  <div class="footer-column">
-    <h4 class="footer-list-header">Help Me!</h4>
-    <ul class="footer-list-top">
-      <li>+919254336743  <i class="fa fa-phone"></i></li>
-      <li><a href="#">bookmymovie@gmail.com <i class="fa fa-envelope"></i></a></li>
-    </ul>
-  </div>
-  <div class="vl"></div>
-  <div class="footer-column">
-    <h4 class="footer-list-header">Connect with us</h4>
-   <a href="facebook.com"><i class="fa fa-facebook"></i></a>
-    <a href="twitter.com"><i class="fa fa-twitter"></i></a>
-    <a href="instagram.com"><i class="fa fa-instagram"></i></a>
-  </div>
-</div>
-<div class="footer-bottom">   
-  <center><h4>OUR VISION</h4></center>
-<center><p>offering a wide range of theater and movie selection in various regions in India at one click!!</p></center>
-</div>
+      <div class="footer-column">
+        <h4 class="footer-list-header">About Pavilion</h4>
+        <ul class="footer-list-top">
+          <li><a href="#">GET TO KNOW US</a></li>
+          <li><a href="#">PROMOS</a></li>
+          <li><a href="#">EVENTS</a></li>
+          <li><a href="#">privacy</a></li>
+        </ul>
+      </div>
+      <div class="vl"></div>
+      <div class="footer-column">
+        <h4 class="footer-list-header">Help Me!</h4>
+        <ul class="footer-list-top">
+          <li>+919254336743 <i class="fa fa-phone"></i></li>
+          <li><a href="#">bookmymovie@gmail.com <i class="fa fa-envelope"></i></a></li>
+        </ul>
+      </div>
+      <div class="vl"></div>
+      <div class="footer-column">
+        <h4 class="footer-list-header">Connect with us</h4>
+        <a href="facebook.com"><i class="fa fa-facebook"></i></a>
+        <a href="twitter.com"><i class="fa fa-twitter"></i></a>
+        <a href="instagram.com"><i class="fa fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <center>
+        <h4>OUR VISION</h4>
+      </center>
+      <center>
+        <p>offering a wide range of theater and movie selection in various regions in India at one click!!</p>
+      </center>
+    </div>
   </footer>
 </body>
 
