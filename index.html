@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="header.css" />
   <link rel="stylesheet" href="footer.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="slider.js"></script>
 </head>
 <body class="body1">
@@ -75,29 +75,19 @@
           <img src="images/poster4.jpg" alt="">
         </div>
         <!--slide images end-->
-        <!--automatic navigation start-->
-        <div class="navigation-auto">
-          <div class="auto-btn1"></div>
-          <div class="auto-btn2"></div>
-          <div class="auto-btn3"></div>
-          <div class="auto-btn4"></div>
-        </div>
-        <!--automatic navigation end-->
         <div class="arrow">
           <a class="prev" onclick="prev()">&#10094;</a>
           <a class="next" onclick="next()">&#10095;</a>
         </div>
+        <!--slider navigation start-->
+        <div class="slider-nav">
+          <label for="radio1" class="slider-nav-btn1"></label>
+          <label for="radio2" class="slider-nav-btn2"></label>
+          <label for="radio3" class="slider-nav-btn3"></label>
+          <label for="radio4" class="slider-nav-btn4"></label>
+        </div>
+        <!--slider navigation end-->
       </div>
-
-      <!--manual navigation start-->
-      <div class="navigation-manual">
-        <label for="radio1" class="manual-btn"></label>
-        <label for="radio2" class="manual-btn"></label>
-        <label for="radio3" class="manual-btn"></label>
-        <label for="radio4" class="manual-btn"></label>
-      </div>
-      <!--manual navigation end-->
-
     </div>
     <div class="genres-container">
       <div class="genres-title">Genres</div>
