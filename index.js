@@ -44,4 +44,3 @@ function next(){
     }
     document.getElementById('radio' + counter).checked = true;
 }
-''
