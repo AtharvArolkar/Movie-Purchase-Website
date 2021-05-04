@@ -64,13 +64,6 @@ header{
     margin-right: 13px;
     color: grey;
 }
-/* #check:not(:checked){
-
-} */
-#check{
-    display: none;
-
-}
 #profilediv{
     background-color: #00b8a9;
     border-radius: 30px 30px 0 0;
@@ -110,17 +103,6 @@ header{
 .sidenavbar a:hover {
     border-radius: 20px;
     background: #ecd89a;
-}
-#check:checked ~ .sidenavbar div {
-    display: none;
-}
-#check:checked ~ .sidenavbar a{
-    display: none;
-}
-#check:checked ~ .sidenavbar{
-    /* display: none; */
-    width:0%;
-    /* z-index: -10; */
 }
 content{
     background-color: white;
