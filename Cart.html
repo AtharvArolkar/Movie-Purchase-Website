@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="cart.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="cart.js"></script>
     <title>Document</title>
     <style>
         
@@ -24,31 +26,60 @@
                 </div>
                 <div class="calculate">
                     <div id="numbercal">
-                        <button id="sub" onclick="sub()">-</button>
-                        <p id="count">2</p>
-                        <button id="add" onclick="add()">+</button>
-                        
+                        <button id="sub">-</button>
+                        <span id="count">2</span>
+                        <!-- <input type="number" id="count" value="2"> -->
+                        <button id="add">+</button>
                     </div >
                     <div id="movietot">
-                        <p >2000</p>
+                        <span>Rs.</span>
+                        <span class="movieprice">800</span>
+                    </div>
+                </div>
+            </div>
+            <div class= "movie">
+                <div class="moviename">
+                    <p>Mank</p>
+                </div>
+                <div class="calculate">
+                    <div id="numbercal">
+                        <button id="sub">-</button>
+                        <span id="count">1</span>
+                        <button id="add">+</button>
+                    </div >
+                    <div id="movietot">
+                        <span>Rs.</span>
+                        <span class="movieprice">500</span>
+                    </div>
+                </div>
+            </div>
+            <div class= "movie">
+                <div class="moviename">
+                    <p>Hamilton</p>
+                </div>
+                <div class="calculate">
+                    <div id="numbercal">
+                        <button id="sub">-</button>
+                        <span id="count">1</span>
+                        <button id="add">+</button>
+                    </div >
+                    <div id="movietot">
+                        <span>Rs.</span>
+                        <span class="movieprice">600</span>
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="total-amt">
-            <div id="tottext">
-                <h3>Total</h3>
-            </div>
             <div id="totalsum">
-                <p >2000</p>
+                <span id="totalspan">Total:</span>
+                <span id="totalprice">Rs.</span>
+                <span id="totalprice" class="total-price-value">2000</span>
             </div>
             <div>
-                <button id="checkout" onclick="somefunc()">Checkout</button>
+                <button id="checkout">Checkout</button>
             </div>
         </div>
     </div>
-
 </body>
-
 </html>
