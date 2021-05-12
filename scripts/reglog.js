@@ -1,5 +1,4 @@
 function validateInput(input){
-    console.log(input.name,input.validity.patternMismatch);
     if(input.validity.patternMismatch){
         var valMessage='Enter valid '+input.name;
         input.setCustomValidity(valMessage);

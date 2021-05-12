@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="loginreg.css" />
-    <link rel="stylesheet" href="header.css" />
-    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="css/loginreg.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="header.js"></script>
-    <script type="text/javascript" src="reglog.js"></script>
+    <script src="scripts/header.js"></script>
+    <script src="scripts/reglog.js"></script>
     <title>Register</title>
 </head>
 <body>
@@ -121,7 +121,7 @@
         <div id="loginbkgrd1">
             <div id="register">
                 <div><h2 id="loginheader">REGISTER</h2></div>
-                <form action='' method=post>
+                <form action='backend/register.php' method=post>
                 <div><input type="text" name="Name" id="fullname" class="essentials1" oninput="validateInput(this)" pattern="^[a-zA-Z -]+$" placeholder="Full Name" required></div>
                 <div><input type="email" name="Email" id="email" class="essentials1" oninput="validateInput(this)" pattern='[\w._]+@[\w_.]+(\.{1}[a-zA-Z]+){1}' placeholder="Email" required></div>
                 <div><input type="text" name="Ph.Number" id="number" class="essentials1" oninput="validateInput(this)" pattern='^(\+91|0)?\d{10}$' placeholder="Phone No." required></div>
@@ -129,7 +129,7 @@
                     <div class="legend1">Gender</div>
                     <label for="male">male</label>
                         <input type="radio" name="gender" id="male" value="male" required>
-                        <label for="female">female</label>
+                        <label for="F">female</label>
                         <input type="radio" name="gender" id="female" value="female">
                         <label for="other">other</label>
                         <input type="radio" name="gender" id="other" value="other">
