@@ -85,6 +85,7 @@ function placeOrder() {
         $('.total-price-value').html("0");
         dict = {};
         movielist = [];
+        $('#cart-item-total').html(0);
     }
 }
 function addmov(movie_name, price) {
@@ -147,7 +148,7 @@ function addmov(movie_name, price) {
                 return a + b;
             }, 0
         ));
-
+        $('#cart-item-total').html(ordercount);
     } console.log(dict);
 }
 
