@@ -44,3 +44,44 @@
 .hitgallery img:hover{
     opacity: 0.5;
 }
+.cartButtonsholder{
+    /* margin: 10px;; */
+    /* align-items: center; */
+    /* align: center; */
+    font-family: cursive;
+    display: inline-flex;
+    justify-content: center;
+    width: 247px;
+}
+.cartButton{
+    font-family: cursive;
+    margin: 10px;
+    width: 150px;
+    height: 40px;
+    border: 2px solid #ffde7d;
+    border-radius: 10px;
+    background-color: #ffffff
+    /* background-color: blue; */
+}
+.cartButton:hover{
+    transition: 0.4s;
+    transform: scale(1.1);
+    transition-property:all;
+    background-color: #ffde7d;
+} 
+.cartButton:visited{
+    background-color: #00ff6a;;
+} 
+#cart-item-total{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    border: 0px solid black;
+    border-radius: 15px;
+    margin-top: 1px;
+    background-color: #f31111;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 1px;
+}
