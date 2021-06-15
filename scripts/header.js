@@ -42,6 +42,7 @@ $(document).ready(
                         return a + b;
                     }, 0
                 ));
+                ordercount++;
             }
         );
         $(document).on('click', '#sub',
@@ -70,6 +71,7 @@ $(document).ready(
                         return a + b;
                     }, 0
                 ));
+                ordercount--;
             }
         );
     }
