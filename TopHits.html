@@ -11,6 +11,39 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="scripts/header.js"></script>
+
+
+
+
+
+
+    <script language="javascript" type="text/javascript">
+      // <!--
+      //Browser Support Code
+      function ajaxFunction(str) {
+        if (str.length == 0) {
+          document.getElementById("txtHint").innerHTML = "";
+          return;
+        } else {
+          var xmlhttp = new XMLHttpRequest();
+          xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+              document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+          };
+        //   queryString +=  "&name=" + name;
+          xmlhttp.open("GET", "search.php?q=" + str, true);
+          xmlhttp.send();
+        }
+      }
+      //-->
+    </script>
+
+
+
+
+
+
   <title>BookMyMovie-Top Hits</title>
 </head>
 
@@ -31,7 +64,9 @@
       <h1 id="sitename">BookMyMovie</h1>
       <span>
         <div>
-          <input type="text" name="search" id="search" placeholder="&#128270; Search Movies, Theatres ..." />
+          <input type="text" name="search" list="txtHint" id="search" onkeyup="ajaxFunction(this.value)" placeholder="&#128270; Search Movies, Theatres ..." />
+          <datalist id="txtHint" >
+          </datalist>
         </div>
       </span>
     </div>
