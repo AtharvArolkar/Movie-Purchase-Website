@@ -74,7 +74,19 @@ $(document).ready(
         );
     }
 );
+function placeOrder() {
+    if (ordercount > 0) {
+        window.confirm("Order Placed");
+        ordercount = 0;
 
+        $('.movie').hide(100);
+	$('.movie').remove();
+        count = 0;
+        console.log("yyoyo");
+        dict = {};
+        movielist = [];
+    }
+}
 function addmov(movie_name, price) {
     var div1 = document.createElement("div")
     div1.className += "movie";//div1
@@ -114,9 +126,12 @@ function addmov(movie_name, price) {
     div5.append(span3);
 
     if (movielist.includes(movie_name)) {
-
+        //                 dict[movie_name]+=1;
+        // var gettt="."+movie_name.substring(0, 2)+"id #count";
+        // console.log(gettt);
+        // $(gettt).innerHTML=dict[movie_name];
+        // add();
         window.alert("Item Already Added to Cart");
-
     } else {
         ordercount++;
         $(".cart-list").append(div1);

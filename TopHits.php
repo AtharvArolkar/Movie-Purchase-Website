@@ -1,3 +1,8 @@
+<?php
+
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +15,7 @@
   <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="scripts/header.js"></script>
+    <script src="header.js"></script>
 
 
 
@@ -31,16 +36,32 @@
               document.getElementById("txtHint").innerHTML = this.responseText;
             }
           };
-        //   queryString +=  "&name=" + name;
           xmlhttp.open("GET", "search.php?q=" + str, true);
           xmlhttp.send();
         }
       }
-      //-->
+
+      function submitorder(deci){
+    console.log(deci);
+    if(deci ==0){
+      window.alert("PLZ LOGIN TO YOUR ACCOUNT FIRST");
+    }
+    else{
+      if (ordercount > 0) {
+            window.confirm("Order Placed, Continue Shoping?");
+            ordercount = 0;
+            $('#cart-item-total').html(0);
+            $('.movie').remove();
+            count = 0;
+            console.log("hello this is placeorder function");
+            $('.total-price-value').html(0);
+            movielist=[];
+            ordercount = 0;
+        }
+    }
+}
+
     </script>
-
-
-
 
 
 
@@ -72,19 +93,26 @@
     </div>
     <div>
       <nav class="navbar2">
-        <span><a href="index.html">Home</a></span>
-        <span><a href="TopHits.html">Top Hits</a></span>
+        <span><a href="index.php">Home</a></span>
+        <span><a href="TopHits.php">Top Hits</a></span>
         <span id="cart-button"><i class="fa fa-shopping-cart"></i><span id="cart-item-total">0</span></span>
         <span id="threelines"><i class="fa fa-user-circle"></i></span>
       </nav>
     </div>
     <div class="sidenavbar">
       <div id="profilediv">
-        <center><img id="profilepic" src="/images/profile pic.jpg"></center>
+      <center><img id="profilepic" src="/html-experiment-project/images/profile pic.jpg"></center>
       </div>
-      <center><a href="reglog.html">Login/Register</a>
-        <a href="#">Payment History</a>
-        <center>
+      <?php
+      if(isset($_SESSION['username'])){
+        echo '<center><a href="reglog.php">'.$_SESSION["username"].'</a><a href="/html-experiment-project/backend/logout.php">Logout</a>';
+        echo '<a href="#">Payment History</a><center>';
+      }
+      else{
+      echo '<center><a href="reglog.php">Login/Register</a>';
+      echo '<a href="#">Payment History</a><center>';
+    }
+      ?>
     </div>
     <div class="cart">
       <div class="cart-head">
@@ -93,8 +121,8 @@
       <div class="cart-list">
 
 
-<!-- 
-          <div class= "movie">
+
+          <!-- <div class= "movie">
               <div class="moviename">
                   <p>Hamilton</p>
               </div>
@@ -118,7 +146,16 @@
               <span id="totalprice" class="total-price-value">0</span>
           </div>
           <div>
-              <button id="checkout" onclick="placeOrder()">Checkout</button>
+          <!-- <button id="checkout" onclick="placeOrder(1)">Checkout</button> -->
+         <?php
+          if(isset($_SESSION['username'])){
+            echo '<button class="checkout" id="checkout" onclick=submitorder(1) >Checkout</button>';
+          }
+          else{
+            echo '<button class="checkout" id="checkout" onclick="submitorder(0)" >Checkout</button>';
+          }
+          ?>
+              
           </div>
       </div>
   </div>

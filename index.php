@@ -1,3 +1,8 @@
+<?php
+
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -65,19 +70,29 @@
     </div>
     <div>
       <nav class="navbar2">
-        <span><a href="index.html">Home</a></span>
-        <span><a href="TopHits.html">Top Hits</a></span>
+        <span><a href="index.php">Home</a></span>
+        <span><a href="TopHits.php">Top Hits</a></span>
         <span id="cart-button"><i class="fa fa-shopping-cart"></i></span>
         <span id="threelines"><i class="fa fa-user-circle"></i></span>
       </nav>
     </div>
     <div class="sidenavbar">
       <div id="profilediv">
-        <center><img id="profilepic" src="/images/profile pic.jpg"></center>
+        <center><img id="profilepic" src="/html-experiment-project/images/profile pic.jpg"></center>
       </div>
-      <center><a href="reglog.html">Login/Register</a>
-        <a href="#">Payment History</a>
-        <center>
+      <?php
+      if(isset($_SESSION['username'])){
+        echo '<center><a href="reglog.php">'.$_SESSION["username"].'</a><a href="/html-experiment-project/backend/logout.php">Logout</a>';
+        echo '<a href="#">Payment History</a><center>';
+      }
+      else{
+      echo '<center><a href="reglog.php">Login/Register</a>';
+      echo '<a href="#">Payment History</a><center>';
+    }
+      ?>
+      
+        
+        
     </div>
     <div class="cart">
       <div class="cart-head">

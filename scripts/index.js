@@ -44,3 +44,6 @@ function next(){
     }
     document.getElementById('radio' + counter).checked = true;
 }
+function logout(){
+  console.log("log Out");
+}

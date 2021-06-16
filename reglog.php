@@ -1,5 +1,10 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,9 +15,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="scripts/header.js"></script>
-    <script src="scripts/reglog.js"></script>
-    <title>Register</title>
+    <script type="text/javascript" src="scripts/reglog.js"></script>
+    <title>Log In</title>
 </head>
+
 <body>
   <header>
     <div class="navbar1">
@@ -36,17 +42,17 @@
     </div>
     <div>
       <nav class="navbar2">
-        <span><a href="index.html">Home</a></span>
-        <span><a href="TopHits.html">Top Hits</a></span>
+        <span><a href="index.php">Home</a></span>
+        <span><a href="TopHits.php">Top Hits</a></span>
         <span id="cart-button"><i class="fa fa-shopping-cart"></i></span>
         <span id="threelines"><i class="fa fa-user-circle"></i></span>
       </nav>
     </div>
     <div class="sidenavbar">
       <div id="profilediv">
-        <center><img id="profilepic" src="/images/profile pic.jpg"></center>
+      <center><img id="profilepic" src="/html-experiment-project/images/profile pic.jpg"></center>
       </div>
-      <center><a href="reglog.html">Login/Register</a>
+      <center><a href="reglog.php">Login/Register</a>
         <a href="#">Payment History</a>
         <center>
     </div>
@@ -118,62 +124,61 @@
   </div>
   </header>
     <content>
-        <div id="loginbkgrd1">
-            <div id="register">
-                <div><h2 id="loginheader">REGISTER</h2></div>
-                <form action='backend/register.php' method=post>
-                <div><input type="text" name="Name" id="fullname" class="essentials1" oninput="validateInput(this)" pattern="^[a-zA-Z -]+$" placeholder="Full Name" required></div>
-                <div><input type="email" name="Email" id="email" class="essentials1" oninput="validateInput(this)" pattern='[\w._]+@[\w_.]+(\.{1}[a-zA-Z]+){1}' placeholder="Email" required></div>
-                <div><input type="text" name="Ph.Number" id="number" class="essentials1" oninput="validateInput(this)" pattern='^(\+91|0)?\d{10}$' placeholder="Phone No." required></div>
-                <div class="essentials1">
-                    <div class="legend1">Gender</div>
-                    <label for="male">male</label>
-                        <input type="radio" name="gender" id="male" value="male" required>
-                        <label for="F">female</label>
-                        <input type="radio" name="gender" id="female" value="female">
-                        <label for="other">other</label>
-                        <input type="radio" name="gender" id="other" value="other">
+        <div id="loginbkgrd">
+            <div id="login">
+                <div>
+                    <h2 id="loginheader">LOGIN</h2>
                 </div>
-                <div><input type="date" name="dob" class="essentials1" onInput="validateAge(this)" required></div>
-                <div><input type="text" name="username" id="username" class="essentials1" oninput="validateInput(this)" pattern="^[a-zA-Z][\w.]+$" placeholder="Username" required></div>
-                <div><input type="password" name="password" minlength="6" id="password" class="essentials1" placeholder="Password" required></div>
-                <div><button type="submit" id="loginbutton" class="button1"> SignUp</button></div>
+                <form onsubmit="return validateLog()" action='backend/login.php' method=post>
+                <div><input type="text" name="username" id="username" class="essentials" oninput="validateInput(this)" pattern="^[a-z][\w.]+$" placeholder="Username"></div>
+                <div><input type="password" name="password" id="password" class="essentials" minlength="6" placeholder="Password">
+                </div>
+                <div><button id="loginbutton" type="submit" class="button1"> LogIn</button></div>
                 </form>
+                <div id="createacc">Don't have an account?<a href="register.php">Create one?</a></div>
+            </div>
         </div>
     </content>
-
-<footer>
-    <div class="footer-container">
-    <div class="footer-column">
-    <h4 class="footer-list-header">About Pavilion</h4>
-    <ul class="footer-list-top">
-      <li><a href="#">GET TO KNOW US</a></li>
-      <li><a href="#">PROMOS</a></li>
-      <li><a href="#">EVENTS</a></li>
-      <li><a href="#">privacy</a></li>
-    </ul>
-  </div>
-  <div class="vl"></div>
-  <div class="footer-column">
-    <h4 class="footer-list-header">Help Me!</h4>
-    <ul class="footer-list-top">
-      <li>+919254336743  <i class="fa fa-phone"></i></li>
-      <li><a href="#">bookmymovie@gmail.com <i class="fa fa-envelope"></i></a></li>
-    </ul>
-  </div>
-  <div class="vl"></div>
-  <div class="footer-column">
-    <h4 class="footer-list-header">Connect with us</h4>
-   <a href="facebook.com"><i class="fa fa-facebook"></i></a>
-    <a href="twitter.com"><i class="fa fa-twitter"></i></a>
-    <a href="instagram.com"><i class="fa fa-instagram"></i></a>
-  </div>
-</div>
-<div class="footer-bottom">   
-  <center><h4>OUR VISION</h4></center>
-<center><p>offering a wide range of theater and movie selection in various regions in India at one click!!</p></center>
-</div>
-</footer>
-
+    <footer>
+        <div class="footer-container">
+          <div class="footer-column">
+            <h4 class="footer-list-header">About Pavilion</h4>
+            <ul class="footer-list-top">
+              <li><a href="#">GET TO KNOW US</a></li>
+              <li><a href="#">PROMOS</a></li>
+              <li><a href="#">EVENTS</a></li>
+              <li><a href="#">privacy</a></li>
+            </ul>
+          </div>
+          <div class="vl"></div>
+          <div class="footer-column">
+            <h4 class="footer-list-header">Help Me!</h4>
+            <ul class="footer-list-top">
+              <li>+919254336743 <i class="fa fa-phone"></i></li>
+              <li>
+                <a href="#">bookmymovie@gmail.com <i class="fa fa-envelope"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="vl"></div>
+          <div class="footer-column">
+            <h4 class="footer-list-header">Connect with us</h4>
+            <a href="facebook.com"><i class="fa fa-facebook"></i></a>
+            <a href="twitter.com"><i class="fa fa-twitter"></i></a>
+            <a href="instagram.com"><i class="fa fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <center><h4>OUR VISION</h4></center>
+          <center>
+            <p>
+              offering a wide range of theater and movie selection in various regions
+              in India at one click!!
+            </p>
+          </center>
+        </div>
+      </footer>
+      
 </body>
+
 </html>

@@ -22,12 +22,7 @@
 	$sql= "INSERT INTO users (name, email, phone, gender, birthdate, username, password) VALUES ('$name','$email','$number','$gender','$dob','$username','$password');";
     echo "<script>console.log(\"$sql\");</script>";
 	if (mysqli_query($conn, $sql)) {
-	    echo "
-    <h3>Successfully registered!</h3>
-    <div>
-        Continue to login? <a href='/html-experiment-project/reglog.html'>Login.</a>
-    </div>
-    ";
+	    header("location:/html-experiment-project/reglog.php");
 	} else {
 	    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }

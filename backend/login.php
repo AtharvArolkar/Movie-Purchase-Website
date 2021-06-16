@@ -1,5 +1,5 @@
 <?php
-		
+		session_start();
 		$username=$_POST["username"];
 		$password=$_POST["password"];
         $dbhost = "localhost";
@@ -30,11 +30,8 @@
 // }
     echo "<script>console.log(\"$sql\");</script>";
 	if ($count==1) {
-	    echo "
-            <h3>Successfully logged in!</h3>
-            <div>
-            Continue to HomePage? <a href='/html-experiment-project/index.html'>Home</a>
-            </div>";
+		$_SESSION['username']=$row['name'];
+		header("location:/html-experiment-project/index.php");
 	} else {
         echo "<h3>No Account Found or Wrong Username/Password</h3>";
     }
