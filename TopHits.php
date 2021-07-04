@@ -1,6 +1,8 @@
 <?php
 
 session_start();
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: *");
 ?>
 
 <!DOCTYPE html>
@@ -15,56 +17,7 @@ session_start();
   <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="header.js"></script>
-
-
-
-
-
-
-    <script language="javascript" type="text/javascript">
-      // <!--
-      //Browser Support Code
-      function ajaxFunction(str) {
-        if (str.length == 0) {
-          document.getElementById("txtHint").innerHTML = "";
-          return;
-        } else {
-          var xmlhttp = new XMLHttpRequest();
-          xmlhttp.onreadystatechange = function () {
-            if (this.readyState == 4 && this.status == 200) {
-              document.getElementById("txtHint").innerHTML = this.responseText;
-            }
-          };
-          xmlhttp.open("GET", "search.php?q=" + str, true);
-          xmlhttp.send();
-        }
-      }
-
-      function submitorder(deci){
-    console.log(deci);
-    if(deci ==0){
-      window.alert("PLZ LOGIN TO YOUR ACCOUNT FIRST");
-    }
-    else{
-      if (ordercount > 0) {
-            window.confirm("Order Placed, Continue Shoping?");
-            ordercount = 0;
-            $('#cart-item-total').html(0);
-            $('.movie').remove();
-            count = 0;
-            console.log("hello this is placeorder function");
-            $('.total-price-value').html(0);
-            movielist=[];
-            ordercount = 0;
-        }
-    }
-}
-
-    </script>
-
-
-
+  <script src="scripts/header.js"></script>
   <title>BookMyMovie-Top Hits</title>
 </head>
 
@@ -146,13 +99,13 @@ session_start();
               <span id="totalprice" class="total-price-value">0</span>
           </div>
           <div>
-          <!-- <button id="checkout" onclick="placeOrder(1)">Checkout</button> -->
          <?php
-          if(isset($_SESSION['username'])){
-            echo '<button class="checkout" id="checkout" onclick=submitorder(1) >Checkout</button>';
+          if(isset($_SESSION['user'])){
+            $username = $_SESSION['user'];
+            echo '<button class="checkout" id="checkout" onclick="submitorder(\''.$username.'\')" >Checkout</button>';
           }
           else{
-            echo '<button class="checkout" id="checkout" onclick="submitorder(0)" >Checkout</button>';
+            echo '<button class="checkout" id="checkout" onclick="submitorder(null)" >Checkout</button>';
           }
           ?>
               

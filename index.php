@@ -14,36 +14,6 @@ session_start();
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="scripts/index.js"></script>
   <script src="scripts/header.js"></script>
-
-
-
-
-  <script language="javascript" type="text/javascript">
-    // <!--
-    //Browser Support Code
-    function ajaxFunction(str) {
-      if (str.length == 0) {
-        document.getElementById("txtHint").innerHTML = "";
-        return;
-      } else {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function () {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("txtHint").innerHTML = this.responseText;
-          }
-        };
-      //   queryString +=  "&name=" + name;
-        xmlhttp.open("GET", "search.php?q=" + str, true);
-        xmlhttp.send();
-      }
-    }
-    //-->
-  </script>
-
-
-
-
-
 </head>
 <body class="body1">
   <header>

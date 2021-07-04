@@ -6,7 +6,7 @@
 	$dbuser = "root";
 	$dbpass = "2547";
 	$db = "bookmymovie";
-	$conn = mysqli_connect("localhost","root") or die("Connect failed: %s\n". $conn -> error);
+	$conn = mysqli_connect("localhost","root",$dbpass) or die("Connect failed: %s\n". $conn -> error);
 	if ($conn) {
 		// echo "Connection is Establish!";
 	}
@@ -14,7 +14,7 @@
 		// echo "ERROR Connection Failed!";
 	}
 	mysqli_select_db($conn, 'bookmymovie');
-	$sql= "SELECT name FROM users WHERE username ='$username' and password='$password'";
+	$sql= "SELECT name,username FROM users WHERE username ='$username' and password='$password'";
     // if(mysqli_query($conn, $sql)==mysqli_query($conn, $sql1)){
     //     echo "Hello";
     // }else{
@@ -31,7 +31,8 @@
     echo "<script>console.log(\"$sql\");</script>";
 	if ($count==1) {
 		$_SESSION['username']=$row['name'];
-		header("location:/html-experiment-project/index.php");
+		$_SESSION['user']=$row['username'];
+		header("location:/../index.php");
 	} else {
         echo "<h3>No Account Found or Wrong Username/Password</h3>";
     }
