@@ -54,12 +54,13 @@ header("Access-Control-Allow-Headers: *");
     </div>
     <div class="sidenavbar">
       <div id="profilediv">
-      <center><img id="profilepic" src="/html-experiment-project/images/profile pic.jpg"></center>
+      <center><img id="profilepic" src="/./images/profile pic.jpg"></center>
       </div>
       <?php
       if(isset($_SESSION['username'])){
-        echo '<center><a href="reglog.php">'.$_SESSION["username"].'</a><a href="/html-experiment-project/backend/logout.php">Logout</a>';
-        echo '<a href="#">Payment History</a><center>';
+        echo '<center><a href="reglog.php">'.$_SESSION["username"].'</a>';
+        echo '<a href="http://localhost:8080/bookmymovie/payment_history.jsp?username='.$_SESSION["user"].'">Payment History</a><center>';
+        echo '<a href="/html-experiment-project/backend/logout.php">Logout</a>';
       }
       else{
       echo '<center><a href="reglog.php">Login/Register</a>';

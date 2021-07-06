@@ -96,7 +96,7 @@ function submitorder(username) {
         orders.push(order);
       });
       console.log(orders);
-      var url = "http://localhost:8080/bookmymovie/save_cart.jsp";
+      var url = "http://localhost:8080/bookmymovie/save_cart";
       var success = true;
       orders.forEach(function (order, index) {
         console.log(order);
