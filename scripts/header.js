@@ -57,15 +57,16 @@ $(document).ready(function () {
     var price = parseInt(price_span.text()) / count;
     console.log("price", price);
     count -= 1;
-    countspan.text(count);
-    console.log("countspan", countspan.text(count));
-    $(this).next().text(count);
-    price_span.text(price * count).trigger("change");
     if (count == 0) {
+      ordercount-=1;
+      movielist.pop($(this).parents(".movie").find(".moviename").text());
       $(this).parents(".movie").hide(100);
       $(this).parents(".movie").remove();
+    }else{
+      countspan.text(count);
+      $(this).next().text(count);
+      price_span.text(price * count).trigger("change");
     }
-
     var pricearr = [];
     $(".movieprice").each(function () {
       pricearr.push(parseInt($(this).text()));
@@ -77,7 +78,13 @@ $(document).ready(function () {
     );
   });
 });
-
+$(document).ready(
+  function(){
+    $("input").each(function(){
+      this.autocomplete="off";
+    })
+  }
+)
 function submitorder(username) {
   if (!username) {
     window.alert("PLZ LOGIN TO YOUR ACCOUNT FIRST");
@@ -101,7 +108,6 @@ function submitorder(username) {
       orders.forEach(function (order, index) {
         console.log(order);
         $.post(url, order).done(function(response){
-          alert("OK");
           ordercount = 0;
           $("#cart-item-total").html(0);
           $(".movie").remove();

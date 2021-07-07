@@ -17,12 +17,12 @@
 	$dbuser = "root";
 	$dbpass = "2547";
 	$db = "bookmymovie";
-	$conn = mysqli_connect("localhost","root") or die("Connect failed: %s\n". $conn -> error);
+	$conn = mysqli_connect("localhost","root","2547") or die("Connect failed: %s\n". $conn -> error);
 	mysqli_select_db($conn, 'bookmymovie');
 	$sql= "INSERT INTO users (name, email, phone, gender, birthdate, username, password) VALUES ('$name','$email','$number','$gender','$dob','$username','$password');";
     echo "<script>console.log(\"$sql\");</script>";
 	if (mysqli_query($conn, $sql)) {
-	    header("location:/html-experiment-project/reglog.php");
+	    header("location:/../reglog.php");
 	} else {
 	    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }

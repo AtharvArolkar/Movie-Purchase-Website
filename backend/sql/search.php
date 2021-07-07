@@ -3,7 +3,7 @@
    $dbuser = "root";
    $dbpass = "2547";
    $dbname = "bookmymovie";
-   $conn = mysqli_connect("localhost","root") or die("Connect failed: %s\n". $conn -> error);
+   $conn = mysqli_connect("localhost","root","2547") or die("Connect failed: %s\n". $conn -> error);
 	if ($conn) {
 		echo "Connection is Establish!";
 	}

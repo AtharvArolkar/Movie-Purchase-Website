@@ -32,6 +32,8 @@
 	if ($count==1) {
 		$_SESSION['username']=$row['name'];
 		$_SESSION['user']=$row['username'];
+		setcookie('username', $row['username'], time() + (864000 * 30), "/");
+		setcookie('name', $row['name'], time() + (864000 * 30), "/");
 		header("location:/../index.php");
 	} else {
         echo "<h3>No Account Found or Wrong Username/Password</h3>";
